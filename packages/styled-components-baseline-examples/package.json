@@ -1,6 +1,6 @@
 {
   "name": "@panacea/styled-components-baseline-examples",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "private": true,
   "description": "Example website for @panacea/styled-components-baseline",
   "main": "index.js",
@@ -15,6 +15,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "publish": "node ./scripts/mekker.js"
   }
 }
