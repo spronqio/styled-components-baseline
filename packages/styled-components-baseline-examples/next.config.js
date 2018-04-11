@@ -8,4 +8,3 @@ module.exports = {
     }
   }
 
-  // git subtree push --prefix packages/styled-components-baseline-examples/out  origin gh-pages
