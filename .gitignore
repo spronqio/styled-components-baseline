@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+index.cjs.js
+index.umd.js
+index.esm.js
+index.js
+defaults.esm.js
+defaults.js
+Layouts
+Typography
+dist
+*.log

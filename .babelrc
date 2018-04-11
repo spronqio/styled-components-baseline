@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    "@babel/syntax-dynamic-import",
+    "@babel/proposal-object-rest-spread",
+    "@babel/proposal-throw-expressions"
+  ]
+}
