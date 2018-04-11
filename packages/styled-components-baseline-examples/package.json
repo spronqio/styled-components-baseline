@@ -16,6 +16,6 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "prepare": "next build && next export && touch ./out/.nojekyll && ./scripts/gh-pages.sh"
+    "prepare": "next build && next export && touch ./out/.nojekyll && rm -rf ../../docs && mv out ../../docs && git add ../../docs && git commit -m \"Updated site\" && git push"
   }
 }
