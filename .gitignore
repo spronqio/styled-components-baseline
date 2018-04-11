@@ -10,3 +10,4 @@ Layouts
 Typography
 dist
 *.log
+.next
