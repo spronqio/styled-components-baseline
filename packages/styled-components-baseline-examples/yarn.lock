@@ -6,9 +6,9 @@
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@hocs/with-lifecycle/-/with-lifecycle-0.3.0.tgz#e28c45d82b19679f45b58d48993d321dec53a3cf"
 
-"@panacea/styled-components-baseline@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@panacea/styled-components-baseline/-/styled-components-baseline-0.0.1.tgz#28e4657f18edc8621d85bc55567fd0141e3e198d"
+"@panacea/styled-components-baseline@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@panacea/styled-components-baseline/-/styled-components-baseline-0.0.4.tgz#5123c607850f8a5c96589cf07b044a3caebadee1"
   dependencies:
     "@hocs/with-lifecycle" "^0.3.0"
     lodash.has "^4.5.2"
