@@ -1,6 +1,6 @@
 {
   "name": "@panacea/styled-components-baseline-examples",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "description": "Example website for @panacea/styled-components-baseline",
   "main": "index.js",
   "license": "MIT",
