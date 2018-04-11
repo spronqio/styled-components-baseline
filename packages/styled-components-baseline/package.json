@@ -1,6 +1,6 @@
 {
   "name": "@panacea/styled-components-baseline",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "main": "index.js",
   "license": "MIT",
   "module": "index.esm.js",
@@ -54,7 +54,12 @@
     "prepublishOnly": "npm run build"
   },
   "files": [
-    "dist"
+    "Layouts/**/*",
+    "Typography/**/*",
+    "index.js",
+    "index.esm.js",
+    "defaults.js",
+    "defaults.esm.js"
   ],
   "peerDependencies": {
     "react": "^16.2.0",
