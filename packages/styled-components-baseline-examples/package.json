@@ -1,6 +1,6 @@
 {
   "name": "@panacea/styled-components-baseline-examples",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "description": "Example website for @panacea/styled-components-baseline",
   "main": "index.js",
   "license": "MIT",
@@ -15,6 +15,6 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prepare": "next build && next export && touch ./out/.nojekyll && node ./gh-pages.sh"
+    "prepare": "next build && next export && touch ./out/.nojekyll && ./scripts/gh-pages.sh"
   }
 }
