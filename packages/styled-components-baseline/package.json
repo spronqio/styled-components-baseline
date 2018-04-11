@@ -1,6 +1,6 @@
 {
   "name": "@panacea/styled-components-baseline",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "index.js",
   "license": "MIT",
   "module": "index.esm.js",
@@ -46,7 +46,7 @@
     "rollup-plugin-regenerator": "^0.5.4"
   },
   "scripts": {
-    "prepare": "install-self-peers -- --ignore-scripts",
+    "prepare": "install-self-peers -- --ignore-scripts && npm run build",
     "build": "rollup -c --experimentalDynamicImport",
     "dev": "rollup -c -w --experimentalDynamicImport",
     "test": "node test/test.js",
