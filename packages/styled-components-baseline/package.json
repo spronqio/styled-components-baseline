@@ -1,6 +1,6 @@
 {
   "name": "@panacea/styled-components-baseline",
-  "version": "0.0.31",
+  "version": "0.0.44",
   "main": "index.js",
   "license": "MIT",
   "module": "index.esm.js",
