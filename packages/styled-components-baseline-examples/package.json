@@ -1,6 +1,6 @@
 {
   "name": "@panacea/styled-components-baseline-examples",
-  "version": "0.0.21",
+  "version": "0.0.24",
   "description": "Example website for @panacea/styled-components-baseline",
   "main": "index.js",
   "license": "MIT",
@@ -15,6 +15,6 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prepare": "node ./scripts/mekker.js"
+    "prepare": "next build && next export"
   }
 }
