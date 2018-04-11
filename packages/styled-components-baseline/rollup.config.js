@@ -10,8 +10,11 @@ const external = [
   'react-loadable',
   'lodash.has',
   'lodash.set',
-  '@hocs/with-lifecycle'
+  '@hocs/with-lifecycle',
+  'styled-components'
 ];
+
+const globals = { 'styled-components': 'styled' };
 const babelPlugin = babel({
   exclude: 'node_modules/**'
 });
@@ -25,6 +28,7 @@ export default [
   {
     input: 'src/index.js',
     external,
+    globals,
     plugins: [resolvePlugin, babelPlugin],
     output: [
       { file: 'index.js', format: 'cjs' },
@@ -34,6 +38,7 @@ export default [
   {
     input: 'src/defaults.js',
     external,
+    globals,
     plugins: [resolvePlugin, babelPlugin],
     output: [
       { file: 'defaults.js', format: 'cjs' },
@@ -43,6 +48,7 @@ export default [
   {
     input: 'src/Layouts/index.js',
     external,
+    globals,
     plugins: [resolvePlugin, babelPlugin],
     output: [
       { file: 'Layouts/index.js', format: 'cjs' },
@@ -52,6 +58,7 @@ export default [
   {
     input: 'src/Typography/index.js',
     external,
+    globals,
     plugins: [resolvePlugin, babelPlugin],
     output: [
       { file: 'Typography/index.js', format: 'cjs' },

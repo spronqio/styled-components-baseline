@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-export const Paragraph = styled.p`
-  margin-top: 0;
-  ${props => props.theme.sb.setFont({ type: 'body', weight: 'normal' })};
-  ${props => props.theme.sb.baselineWithFontSize('zeta', 'body', 2, 2, 'all')};
-`;
-
 export const Section = styled.div`
   ${props => props.theme.sb.clearfix};
   margin: 0 auto;
