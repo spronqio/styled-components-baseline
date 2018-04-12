@@ -1,22 +1,68 @@
 import React from 'react';
+import SyntaxHighlighter, {
+  registerLanguage
+} from 'react-syntax-highlighter/prism-light';
+import jsx from 'react-syntax-highlighter/languages/prism/jsx';
+import darcula from 'react-syntax-highlighter/styles/prism/duotone-light';
+
 import {
   Section,
   SingleMeasure
 } from '@panacea/styled-components-baseline/Layouts';
 import {
+  Blockquote,
   Caption,
+  Code,
   Heading1,
   Heading2,
   Heading3,
-  Paragraph
+  Heading4,
+  Heading5,
+  Heading6,
+  Paragraph,
+  Pre
 } from '@panacea/styled-components-baseline/Typography';
 import Page from './components/Page';
+
+registerLanguage('jsx', jsx);
+const codeExample = `<Section>
+  <SingleMeasure>
+    <Heading1>Baseline first typography.</Heading1>
+    <Heading2>+ responsive modular scale.</Heading2>
+    <Caption>
+      Set text on the web to a baseline grid with Styled Components & rems
+    </Caption>
+    <Pre>
+      <Code>
+        <SyntaxHighlighter language="jsx" style={darcula}>
+          {codeExample}
+        </SyntaxHighlighter>
+      </Code>
+    </Pre>
+  </SingleMeasure>
+</Section>`;
 
 export default () => (
   <Page>
     <Section>
       <SingleMeasure>
-        <Heading1>Lorem ipsum dolor sit&nbsp;amet</Heading1>
+        <Heading1>Baseline first typography.</Heading1>
+        <Heading2>+ responsive modular scale.</Heading2>
+        <Caption>
+          Set text on the web to a baseline grid with Styled Components & rems
+        </Caption>
+        <Pre>
+          <Code>
+            <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample}
+            </SyntaxHighlighter>
+          </Code>
+        </Pre>
+      </SingleMeasure>
+    </Section>
+    <Section>
+      <SingleMeasure>
+        <Heading1>Lorem ipsum</Heading1>
         <Caption>Labore reprehenderit corporis ullam distinctio ex.</Caption>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
@@ -65,6 +111,35 @@ export default () => (
           voluptatem. Recusandae delectus iure vel asperiores saepe dolorum
           omnis eu aliquam&nbsp;similique.
         </Paragraph>
+
+        <Blockquote>
+          <Paragraph>
+            Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis
+            facere, cumque harum optio dignissimos. Duis repellat tempore dolor
+            blanditiis alias impedit officiis ut&nbsp;consectetur.
+          </Paragraph>
+        </Blockquote>
+      </SingleMeasure>
+    </Section>
+    <Section>
+      <SingleMeasure>
+        <Heading1>Heading level 1</Heading1>
+        <Heading2>Heading level 2</Heading2>
+        <Heading3>Heading level 3</Heading3>
+        <Heading4>Heading level 4</Heading4>
+        <Heading5>Heading level 5</Heading5>
+        <Heading6>Heading level 6</Heading6>
+
+        <Paragraph>
+          Paragraph with <b>bold</b>, <i>italic</i>, <a href="#">link</a> and{' '}
+          <Code>code</Code> styles.
+        </Paragraph>
+
+        <Blockquote>
+          <Paragraph>Blockquote</Paragraph>
+        </Blockquote>
+
+        <Caption>Caption text</Caption>
       </SingleMeasure>
     </Section>
   </Page>

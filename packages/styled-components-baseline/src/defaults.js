@@ -58,7 +58,7 @@ export default {
     fontFamily: 'Georgia, serif',
     regular: 400,
     bold: 700,
-    italic: true,
+    italic: 'italic',
     capHeight: 0.66
   },
 

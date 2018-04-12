@@ -10,6 +10,7 @@ import setFont from './mixins/set-font';
 import clearfix from './mixins/clearfix';
 import calculateBassline from './mixins/baseline';
 import calculateBasslineWithFontSize from './mixins/baseline-with-font-size';
+import createBlockquote from './mixins/blockquote';
 
 console.log('start');
 export default ({ defaults: userDefaults = {} } = {}) => {
@@ -56,6 +57,12 @@ export default ({ defaults: userDefaults = {} } = {}) => {
       modularScale
     }),
     baselineWithFontSize: calculateBasslineWithFontSize({
+      fonts,
+      breakpoints,
+      rootSizes,
+      modularScale
+    }),
+    blockquote: createBlockquote({
       fonts,
       breakpoints,
       rootSizes,
