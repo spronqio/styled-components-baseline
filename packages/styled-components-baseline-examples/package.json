@@ -40,6 +40,6 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "prepxare": "next build && next export && touch ./out/.nojekyll && rm -rf ../../docs && mv out ../../docs && git add ../../docs && git commit -m \"Updated site\" && git push"
+    "prepare": "next build && next export && touch ./out/.nojekyll && rm -rf ../../docs && mv out ../../docs && git add ../../docs && git commit -m \"Updated site\" && git push"
   }
 }
