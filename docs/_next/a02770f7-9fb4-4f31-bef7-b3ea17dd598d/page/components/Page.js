@@ -1,0 +1,1 @@
+module.exports=__NEXT_REGISTER_PAGE("/components/Page",function(){var e=webpackJsonp([2],{182:function(e,n,o){e.exports=o(92)}},[182]);return{page:e.default}});
