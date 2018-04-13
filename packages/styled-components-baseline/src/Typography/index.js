@@ -7,12 +7,7 @@ export const Paragraph = styled.p`
 
 export const Blockquote = styled.blockquote`
   ${Paragraph} {
-    ${props => {
-      console.log(props.theme.sb);
-      return props.theme.sb.blockquote.paragraph;
-    }};
-
-    ${props => props.theme.sb.baseline('zeta', 'body', 2, 2, 'all')};
+    ${props => props.theme.sb.blockquote.paragraph};
   }
   ${props => props.theme.sb.breakpoint('break-1')(`margin-left: -1rem;`)};
 `;
@@ -100,22 +95,19 @@ export const Button = styled.button`
 `;
 
 export const Pre = styled.pre`
-  ${props => props.theme.sb.setFont({ type: 'monospace', weight: 'regular' })};
-  ${props => props.theme.sb.fontSize('theta', 'all')};
-  ${props => `background-color: ${props.theme.sb.codeBackgroundColour};`};
-  line-height: 1rem;
   display: block;
   margin-bottom: 2rem;
   padding: 1rem;
-  white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
+  ${props => `background-color: ${props.theme.sb.codeBackgroundColour};`};
 `;
 
 export const Code = styled.code`
+  ${props => props.theme.sb.fontSize('theta', 'all')};
   ${props => props.theme.sb.setFont({ type: 'monospace', weight: 'regular' })};
-  ${props => `background-color: ${props.theme.sb.codeBackgroundColour};`};
+  line-height: 0.5rem;
 `;
 export const HR = styled.hr`
   hr {

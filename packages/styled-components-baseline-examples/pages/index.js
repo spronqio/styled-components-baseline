@@ -1,14 +1,11 @@
 import React from 'react';
-import SyntaxHighlighter, {
-  registerLanguage
-} from 'react-syntax-highlighter/prism-light';
-import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import duotoneLight from 'react-syntax-highlighter/styles/prism/duotone-light';
 
 import {
   Section,
   SingleMeasure,
-  ColumnDuo
+  Column,
+  ColumnDuo,
+  ColumnTrio
 } from '@panacea/styled-components-baseline/Layouts';
 import {
   Blockquote,
@@ -25,7 +22,6 @@ import {
 } from '@panacea/styled-components-baseline/Typography';
 import Page from './components/Page';
 
-registerLanguage('jsx', jsx);
 const codeExample = `<Section>
   <SingleMeasure>
     <Heading1>Baseline first typography.</Heading1>
@@ -51,18 +47,73 @@ export default () => (
         <Caption>
           Set text on the web to a baseline grid with Styled Components & rems
         </Caption>
+        <Pre>
+          <Code>{codeExample}</Code>
+        </Pre>
         <Paragraph>
-          Consectetur adipisicing elit, alias at autem magna aliquid
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
           <a href="#">quam proident</a> quis aliquam. temporibus minus eius
           veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
           facilis. molestiae consequat excepturi laborum perferendis tempor
           minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
+        <Blockquote>
+          <Paragraph>
+            Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis
+            facere, cumque harum optio dignissimos. Duis repellat tempore dolor
+            blanditiis alias impedit officiis ut&nbsp;consectetur.
+          </Paragraph>
+        </Blockquote>
         <Pre>
           <Code>{codeExample}</Code>
         </Pre>
       </ColumnDuo>
       <ColumnDuo>
+        <Heading3>+ responsive modular scale.</Heading3>
+
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+      </ColumnDuo>
+    </Section>
+    <Section>
+      <ColumnTrio>
+        <Heading2>+ responsive modular scale.</Heading2>
+        <Caption>
+          Set text on the web to a baseline grid with Styled Components & rems
+        </Caption>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+        <Blockquote>
+          <Paragraph>
+            Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis
+            facere, cumque harum optio dignissimos. Duis repellat tempore dolor
+            blanditiis alias impedit officiis ut&nbsp;consectetur.
+          </Paragraph>
+        </Blockquote>
+      </ColumnTrio>
+
+      <ColumnTrio>
+        <Heading3>+ responsive modular scale.</Heading3>
+
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+      </ColumnTrio>
+      <ColumnTrio>
         <Heading3>+ responsive modular scale.</Heading3>
 
         <Paragraph>
@@ -72,7 +123,13 @@ export default () => (
           facilis. molestiae consequat excepturi laborum perferendis tempor
           minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
-      </ColumnDuo>
+      </ColumnTrio>
+
+      <Column>
+        <Pre>
+          <Code>{codeExample}</Code>
+        </Pre>
+      </Column>
     </Section>
     <Section>
       <SingleMeasure>
@@ -82,11 +139,7 @@ export default () => (
           Set text on the web to a baseline grid with Styled Components & rems
         </Caption>
         <Pre>
-          <Code>
-            {/* <SyntaxHighlighter language="jsx" style={duotoneLight}>
-              {codeExample}
-            </SyntaxHighlighter> */}
-          </Code>
+          <Code>{codeExample}</Code>
         </Pre>
       </SingleMeasure>
     </Section>
@@ -141,14 +194,6 @@ export default () => (
           voluptatem. Recusandae delectus iure vel asperiores saepe dolorum
           omnis eu aliquam&nbsp;similique.
         </Paragraph>
-
-        {/* <Blockquote>
-          <Paragraph>
-            Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis
-            facere, cumque harum optio dignissimos. Duis repellat tempore dolor
-            blanditiis alias impedit officiis ut&nbsp;consectetur.
-          </Paragraph>
-        </Blockquote> */}
       </SingleMeasure>
     </Section>
     <Section>

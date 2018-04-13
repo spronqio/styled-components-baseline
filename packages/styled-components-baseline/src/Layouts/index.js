@@ -69,14 +69,14 @@ export const ColumnTrio = Column.extend`
   ${props =>
     props.theme.sb.breakpoint('break-3')(`
         p {
-          ${props.theme.ms.fontBaseline('eta', 'body', 2, 2, 3)}
+          ${props.theme.sb.baselineWithFontSize('zeta', 'heading', 2, 2, 3)};
         }
         `)};
   ${props =>
     props.theme.sb.breakpoint('break-4')(
       `
         p {
-          ${props.theme.ms.fontBaseline('eta', 'body', 2, 2, 4)}
+          ${props.theme.sb.baselineWithFontSize('eta', 'heading', 2, 2, 4)};
         }
         `
     )};
