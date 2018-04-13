@@ -3,7 +3,7 @@ import SyntaxHighlighter, {
   registerLanguage
 } from 'react-syntax-highlighter/prism-light';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import darcula from 'react-syntax-highlighter/styles/prism/duotone-light';
+import duotoneLight from 'react-syntax-highlighter/styles/prism/duotone-light';
 
 import {
   Section,
@@ -34,7 +34,7 @@ const codeExample = `<Section>
     </Caption>
     <Pre>
       <Code>
-        <SyntaxHighlighter language="jsx" style={darcula}>
+        <SyntaxHighlighter language="jsx" style={duotoneLight}>
           {codeExample}
         </SyntaxHighlighter>
       </Code>
@@ -51,13 +51,13 @@ export default () => (
         <Caption>
           Set text on the web to a baseline grid with Styled Components & rems
         </Caption>
-        <Pre>
+        {/* <Pre>
           <Code>
-            <SyntaxHighlighter language="jsx" style={darcula}>
+            <SyntaxHighlighter language="jsx" style={duotoneLight}>
               {codeExample}
             </SyntaxHighlighter>
           </Code>
-        </Pre>
+        </Pre> */}
       </SingleMeasure>
     </Section>
     <Section>

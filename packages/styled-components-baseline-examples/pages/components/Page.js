@@ -37,6 +37,9 @@ injectGlobal`
         ${sb.fontSize('zeta', 'all')}
         ${sb.setFont({ type: 'body' })}
         line-height: 2rem;
+        background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px);
+        background-repeat: repeat-y;
+        background-size: 100% 1rem;
     }
 `;
 const reducer = (state = { foo: 100 }) => state;
