@@ -1,7 +1,6 @@
 import React from 'react';
 import createBaseline from '@panacea/styled-components-baseline';
 import { ThemeProvider, injectGlobal } from 'styled-components';
-import { normalize } from 'polished';
 
 const sb = createBaseline({
   defaults: {
@@ -23,13 +22,13 @@ const sb = createBaseline({
   }
 });
 
+/* eslint no-unused-expressions: 0 */
+
 injectGlobal`
     // @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Rubik");
 
-    ${normalize()}
-    * {
-      box-sizing: border-box;
-    }
+    ${sb.reset};
+   
     html {
       ${sb.rootSize}
     }
@@ -42,7 +41,6 @@ injectGlobal`
         background-size: 100% 1rem;
     }
 `;
-const reducer = (state = { foo: 100 }) => state;
 
 export default ({ children, ...rest }) => (
   <ThemeProvider theme={{ sb }} {...rest}>

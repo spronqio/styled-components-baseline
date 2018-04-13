@@ -7,7 +7,8 @@ import duotoneLight from 'react-syntax-highlighter/styles/prism/duotone-light';
 
 import {
   Section,
-  SingleMeasure
+  SingleMeasure,
+  ColumnDuo
 } from '@panacea/styled-components-baseline/Layouts';
 import {
   Blockquote,
@@ -45,19 +46,48 @@ const codeExample = `<Section>
 export default () => (
   <Page>
     <Section>
+      <ColumnDuo>
+        <Heading2>+ responsive modular scale.</Heading2>
+        <Caption>
+          Set text on the web to a baseline grid with Styled Components & rems
+        </Caption>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+        <Pre>
+          <Code>{codeExample}</Code>
+        </Pre>
+      </ColumnDuo>
+      <ColumnDuo>
+        <Heading3>+ responsive modular scale.</Heading3>
+
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+      </ColumnDuo>
+    </Section>
+    <Section>
       <SingleMeasure>
         <Heading1>Baseline first typography.</Heading1>
         <Heading2>+ responsive modular scale.</Heading2>
         <Caption>
           Set text on the web to a baseline grid with Styled Components & rems
         </Caption>
-        {/* <Pre>
+        <Pre>
           <Code>
-            <SyntaxHighlighter language="jsx" style={duotoneLight}>
+            {/* <SyntaxHighlighter language="jsx" style={duotoneLight}>
               {codeExample}
-            </SyntaxHighlighter>
+            </SyntaxHighlighter> */}
           </Code>
-        </Pre> */}
+        </Pre>
       </SingleMeasure>
     </Section>
     <Section>
@@ -112,13 +142,13 @@ export default () => (
           omnis eu aliquam&nbsp;similique.
         </Paragraph>
 
-        <Blockquote>
+        {/* <Blockquote>
           <Paragraph>
             Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis
             facere, cumque harum optio dignissimos. Duis repellat tempore dolor
             blanditiis alias impedit officiis ut&nbsp;consectetur.
           </Paragraph>
-        </Blockquote>
+        </Blockquote> */}
       </SingleMeasure>
     </Section>
     <Section>
@@ -135,9 +165,9 @@ export default () => (
           <Code>code</Code> styles.
         </Paragraph>
 
-        <Blockquote>
+        {/* <Blockquote>
           <Paragraph>Blockquote</Paragraph>
-        </Blockquote>
+        </Blockquote> */}
 
         <Caption>Caption text</Caption>
       </SingleMeasure>

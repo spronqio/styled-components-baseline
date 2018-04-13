@@ -11,8 +11,8 @@ import clearfix from './mixins/clearfix';
 import calculateBassline from './mixins/baseline';
 import calculateBasslineWithFontSize from './mixins/baseline-with-font-size';
 import createBlockquote from './mixins/blockquote';
+import reset from './mixins/reset';
 
-console.log('start');
 export default ({ defaults: userDefaults = {} } = {}) => {
   const combinedDefaults = { ...libraryDefaults, ...userDefaults };
   const {
@@ -25,6 +25,7 @@ export default ({ defaults: userDefaults = {} } = {}) => {
     maxWidths,
     measures,
     lineWidths,
+    linkColour,
     scales
   } = combinedDefaults;
 
@@ -36,6 +37,7 @@ export default ({ defaults: userDefaults = {} } = {}) => {
   const modularScale = calculateResponsiveModularScales({ scales });
   const defaults = {
     ...combinedDefaults,
+    reset,
     clearfix,
     breakpoint: calculateBreakpoint({ breakpoints }),
     rootSize: calculateRootSize({ breakpoints, rootSizes }),
@@ -63,6 +65,7 @@ export default ({ defaults: userDefaults = {} } = {}) => {
       modularScale
     }),
     blockquote: createBlockquote({
+      linkColour,
       fonts,
       breakpoints,
       rootSizes,

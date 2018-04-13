@@ -1,24 +1,18 @@
 import styled from 'styled-components';
 
 export const Paragraph = styled.p`
-  margin-top: 0;
   ${props => props.theme.sb.setFont({ type: 'body', weight: 'normal' })};
   ${props => props.theme.sb.baselineWithFontSize('zeta', 'body', 2, 2, 'all')};
 `;
 
 export const Blockquote = styled.blockquote`
-  margin-top: 0;
-  margin-bottom: 0;
-  ${props => {
-    console.log(props.theme.sb);
-    return `// hi`;
-  }};
   ${Paragraph} {
-    ${props =>
-      props.theme.sb.baselineWithFontSize('zeta', 'body', 2, 3, 'all')};
-    border-left: 0.15rem solid ${props => props.theme.sb.linkColour};
-    padding-left: 1rem;
-    font-style: italic;
+    ${props => {
+      console.log(props.theme.sb);
+      return props.theme.sb.blockquote.paragraph;
+    }};
+
+    ${props => props.theme.sb.baseline('zeta', 'body', 2, 2, 'all')};
   }
   ${props => props.theme.sb.breakpoint('break-1')(`margin-left: -1rem;`)};
 `;
