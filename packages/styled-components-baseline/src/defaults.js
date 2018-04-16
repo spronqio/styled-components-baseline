@@ -39,15 +39,15 @@ export default {
     'width-0': 500, // 500px wide
     'width-1': 600, // 600px wide
     'width-2': 800, // 800px wide
-    'width-3': 1100, // 110px wide
+    'width-3': 1100, // 1100px wide
     'width-4': 1300 // 1300px wide
   },
 
   // Gutter widths
   gutterWidths: {
-    small: '1rem',
-    medium: '2rem',
-    large: '4rem'
+    small: 1, // 1rem
+    medium: 2, // 2rem
+    large: 4 // 4rem
   },
 
   // Add typefaces here.

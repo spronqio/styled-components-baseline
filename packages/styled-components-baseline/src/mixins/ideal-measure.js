@@ -12,13 +12,17 @@ export default ({
   ) {
     const gutterValue = gutterWidths[gutterName];
     const gutter = gutterValue ? gutterValue * 2 : 0;
-
-    const rootSize = rootSizes[`root-size-${breakpoint}`];
+    const rootSize = rootSizes[`rootsize-${breakpoint}`];
     const idealMeasure = measures[`measure-${breakpoint}`];
     const gutterSize = gutter * rootSize;
     const containerWidth = maxWidths[`width-${breakpoint}`];
-    const percentage = idealMeasure * gutterSize / containerWidth * 100;
-    return `${output}: ${main === false ? 100 - percentage : percentage}%;`;
+    const percentage = (idealMeasure + gutterSize) / containerWidth * 100;
+    const correctedPercentage =
+      percentage < 55 ? 55 : percentage > 65 ? 65 : percentage;
+    console.log('correctedPercentage', correctedPercentage);
+    return `${output}: ${
+      main === false ? 100 - correctedPercentage : correctedPercentage
+    }%;`;
   }
 
   /*

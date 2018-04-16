@@ -28,13 +28,13 @@ export const Column = styled.div`
       `float: left;
   margin: initial;
   max-width: initial;
-  padding-left: ${gutterWidths.small};
-  padding-right: ${gutterWidths.small};`
+  padding-left: ${gutterWidths.small}rem;
+  padding-right: ${gutterWidths.small}rem;`
     )};
   ${props =>
     props.theme.sb.breakpoint('break-3')(
-      `padding-left: ${props.theme.sb.gutterWidths.medium};
-  padding-right: ${props.theme.sb.gutterWidths.medium};`
+      `padding-left: ${props.theme.sb.gutterWidths.medium}rem;
+  padding-right: ${props.theme.sb.gutterWidths.medium}rem;`
     )};
 `;
 
@@ -103,4 +103,67 @@ export const ColumnQuatro = Column.extend`
         ${props.theme.sb.baselineWithFontSize('eta', 'body', 2, 3, 4)};
       }
       `)};
+`;
+
+/*
+@include breakpoint(break-1) {
+    @include ideal-measure(1, small);
+  }
+
+  @include breakpoint(break-2) {
+    @include ideal-measure(2, small);
+  }
+
+  @include breakpoint(break-3) {
+    @include ideal-measure(3, medium);
+  }
+
+  @include breakpoint(break-4) {
+    @include ideal-measure(4, medium);
+  }
+
+  */
+export const ColumnMain = Column.extend`
+  ${props =>
+    `${props.theme.sb.breakpoint('break-1')(
+      props.theme.sb.idealMeasure(0, 'small')
+    )};
+    ${props.theme.sb.breakpoint('break-2')(
+      props.theme.sb.idealMeasure(1, 'small')
+    )};
+    ${props.theme.sb.breakpoint('break-3')(
+      props.theme.sb.idealMeasure(2, 'medium')
+    )};
+    ${props.theme.sb.breakpoint('break-4')(
+      props.theme.sb.idealMeasure(3, 'medium')
+    )};`};
+`;
+export const ColumnSidebar = Column.extend`
+  ${props =>
+    `${props.theme.sb.breakpoint('break-1')(
+      `${props.theme.sb.idealMeasure(0, 'small', false)};
+      padding-right:  ${props.theme.sb.gutterWidths.small}rem;
+     
+      `
+    )};
+  ${props.theme.sb.breakpoint('break-2')(
+    props.theme.sb.idealMeasure(1, 'small', false)
+  )};
+  ${props.theme.sb.breakpoint('break-3')(
+    `${props.theme.sb.idealMeasure(2, 'medium', false)};
+    padding-right:  ${props.theme.sb.gutterWidths.large}rem;
+   
+
+    p {
+      ${props.theme.sb.baselineWithFontSize('eta', 'body', 2, 3, 3)};
+    }
+    `
+  )};
+  ${props.theme.sb.breakpoint('break-4')(
+    `${props.theme.sb.idealMeasure(3, 'medium', false)};
+    p {
+     ${props.theme.sb.baselineWithFontSize('eta', 'body', 2, 3, 4)};
+    }
+    `
+  )};`};
 `;

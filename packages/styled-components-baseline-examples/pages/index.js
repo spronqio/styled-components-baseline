@@ -25,7 +25,9 @@ import {
   Column,
   ColumnDuo,
   ColumnTrio,
-  ColumnQuatro
+  ColumnQuatro,
+  ColumnMain,
+  ColumnSidebar
 } from '@panacea/styled-components-baseline/Layouts';
 import Page from './components/Page';
 
@@ -211,7 +213,7 @@ export default () => (
     </Section>
 
     <Section>
-      <ColumnTrio meh={10}>
+      <ColumnTrio>
         <Heading6>Column one</Heading6>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
@@ -283,7 +285,7 @@ export default () => (
       </ColumnQuatro>
 
       <ColumnQuatro>
-        <Heading6>Column three</Heading6>
+        <Heading6>Column four</Heading6>
         <Paragraph>
           Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
           quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
@@ -293,6 +295,66 @@ export default () => (
           elit&nbsp;tempora.
         </Paragraph>
       </ColumnQuatro>
+    </Section>
+    <Section>
+      <ColumnMain>
+        <Heading6>Main column</Heading6>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+      </ColumnMain>
+      <ColumnSidebar>
+        <Heading6>Sidebar</Heading6>
+        <Paragraph>
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          elit&nbsp;tempora.
+        </Paragraph>
+      </ColumnSidebar>
+    </Section>
+    <Section>
+      <ColumnSidebar>
+        <Heading6>Sidebar</Heading6>
+        <Paragraph>
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          elit&nbsp;tempora.
+        </Paragraph>
+      </ColumnSidebar>
+      <ColumnMain>
+        <Heading6>Main column</Heading6>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+      </ColumnMain>
     </Section>
   </Page>
 );
