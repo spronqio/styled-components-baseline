@@ -6,12 +6,12 @@ module.exports = {
     return {
       '/': { page: '/' }
     };
+  },
+  webpack: {
+    resolve: {
+      alias: {
+        'styled-components': require.resolve('styled-components')
+      }
+    }
   }
-  // webpack: {
-  //   resolve: {
-  //     alias: {
-  //       'styled-components': require.resolve('styled-components')
-  //     }
-  //   }
-  // }
 };

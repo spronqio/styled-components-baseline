@@ -1,152 +1,46 @@
 import React from 'react';
 
 import {
-  Section,
-  SingleMeasure,
-  Column,
-  ColumnDuo,
-  ColumnTrio
-} from '@panacea/styled-components-baseline/Layouts';
-import {
+  Bold,
   Blockquote,
   Caption,
   Code,
+  Italic,
   Heading1,
   Heading2,
   Heading3,
   Heading4,
   Heading5,
   Heading6,
+  HorizontalRule,
   Paragraph,
-  Pre
+  Pre,
+  OrderedList,
+  UnorderedList,
+  ListItem
 } from '@panacea/styled-components-baseline/Typography';
+import {
+  Section,
+  SingleMeasure,
+  Column,
+  ColumnDuo,
+  ColumnTrio,
+  ColumnQuatro
+} from '@panacea/styled-components-baseline/Layouts';
 import Page from './components/Page';
 
-const codeExample = `<Section>
-  <SingleMeasure>
-    <Heading1>Baseline first typography.</Heading1>
-    <Heading2>+ responsive modular scale.</Heading2>
-    <Caption>
-      Set text on the web to a baseline grid with Styled Components & rems
-    </Caption>
-    <Pre>
-      <Code>
-        <SyntaxHighlighter language="jsx" style={duotoneLight}>
-          {codeExample}
-        </SyntaxHighlighter>
-      </Code>
-    </Pre>
-  </SingleMeasure>
-</Section>`;
+const codeExample = `body {
+  color: blue;
+}`;
 
 export default () => (
   <Page>
     <Section>
-      <ColumnDuo>
-        <Heading2>+ responsive modular scale.</Heading2>
-        <Caption>
-          Set text on the web to a baseline grid with Styled Components & rems
-        </Caption>
-        <Pre>
-          <Code>{codeExample}</Code>
-        </Pre>
-        <Paragraph>
-          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
-        </Paragraph>
-        <Blockquote>
-          <Paragraph>
-            Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis
-            facere, cumque harum optio dignissimos. Duis repellat tempore dolor
-            blanditiis alias impedit officiis ut&nbsp;consectetur.
-          </Paragraph>
-        </Blockquote>
-        <Pre>
-          <Code>{codeExample}</Code>
-        </Pre>
-      </ColumnDuo>
-      <ColumnDuo>
-        <Heading3>+ responsive modular scale.</Heading3>
-
-        <Paragraph>
-          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
-        </Paragraph>
-      </ColumnDuo>
-    </Section>
-    <Section>
-      <ColumnTrio>
-        <Heading2>+ responsive modular scale.</Heading2>
-        <Caption>
-          Set text on the web to a baseline grid with Styled Components & rems
-        </Caption>
-        <Paragraph>
-          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
-        </Paragraph>
-        <Blockquote>
-          <Paragraph>
-            Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis
-            facere, cumque harum optio dignissimos. Duis repellat tempore dolor
-            blanditiis alias impedit officiis ut&nbsp;consectetur.
-          </Paragraph>
-        </Blockquote>
-      </ColumnTrio>
-
-      <ColumnTrio>
-        <Heading3>+ responsive modular scale.</Heading3>
-
-        <Paragraph>
-          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
-        </Paragraph>
-      </ColumnTrio>
-      <ColumnTrio>
-        <Heading3>+ responsive modular scale.</Heading3>
-
-        <Paragraph>
-          Consectetur adipisicing elit, alias at autem magna aliquid
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
-        </Paragraph>
-      </ColumnTrio>
-
-      <Column>
-        <Pre>
-          <Code>{codeExample}</Code>
-        </Pre>
-      </Column>
-    </Section>
-    <Section>
       <SingleMeasure>
-        <Heading1>Baseline first typography.</Heading1>
-        <Heading2>+ responsive modular scale.</Heading2>
+        <Heading1>Lorem ipsum dolor sit&nbsp;amet</Heading1>
         <Caption>
-          Set text on the web to a baseline grid with Styled Components & rems
+          Labore reprehenderit corporis ullam distinctio&nbsp;ex.
         </Caption>
-        <Pre>
-          <Code>{codeExample}</Code>
-        </Pre>
-      </SingleMeasure>
-    </Section>
-    <Section>
-      <SingleMeasure>
-        <Heading1>Lorem ipsum</Heading1>
-        <Caption>Labore reprehenderit corporis ullam distinctio ex.</Caption>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
           <a href="#">quam proident</a> quis aliquam. temporibus minus eius
@@ -154,25 +48,31 @@ export default () => (
           facilis. molestiae consequat excepturi laborum perferendis tempor
           minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
-
         <Paragraph>
-          Quos atque officia quod. <i>Suscipit delectus</i> cupidatat, quia
-          nulla numquam aute cillum proident. Maiores iusto culpa molestias quam
-          id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud.
-          Tempor aliquip, culpa earum itaque sed consequatur minus aliquip
-          reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
           elit&nbsp;tempora.
         </Paragraph>
+        <OrderedList>
+          <ListItem>Perferendis tempor</ListItem>
+          <ListItem>Minim eiusmod </ListItem>
+          <ListItem>Tempor</ListItem>
+          <ListItem>Minus quia sint</ListItem>
+        </OrderedList>
+
         <Heading2>
           Voluptates mollitia quod tempore laboris&nbsp;commodi
         </Heading2>
 
         <Paragraph>
           Proident dolores corrupti consequatur voluptatibus labore commodi
-          quos. <b>Incidunt mollitia</b> tempora assumenda laborum voluptate
-          accusamus dolore optio incididunt. Maiores at duis consequatur
-          corrupti consectetur, aliquam optio commodo accusamus distinctio,
-          necessitatibus&nbsp;nostrum.
+          quos. <Bold>Incidunt mollitia</Bold> tempora assumenda laborum
+          voluptate accusamus dolore optio incididunt. Maiores at duis
+          consequatur corrupti consectetur, aliquam optio commodo accusamus
+          distinctio, necessitatibus&nbsp;nostrum.
         </Paragraph>
 
         <Paragraph>
@@ -194,28 +94,205 @@ export default () => (
           voluptatem. Recusandae delectus iure vel asperiores saepe dolorum
           omnis eu aliquam&nbsp;similique.
         </Paragraph>
-      </SingleMeasure>
-    </Section>
-    <Section>
-      <SingleMeasure>
+
+        <Blockquote>
+          <Paragraph>
+            Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis
+            facere, cumque harum optio dignissimos. Duis repellat tempore dolor
+            blanditiis alias impedit officiis ut&nbsp;consectetur.
+          </Paragraph>
+        </Blockquote>
+
+        <Pre>
+          <Code>{codeExample}</Code>
+        </Pre>
+        <Heading4>Quibusdam illum quo</Heading4>
+
+        <Paragraph>
+          Quos laboris eos, laborum animi. Ea blanditiis ducimus fugiat officia
+          nostrud consectetur recusandae excepteur. Quis qui maiores distinctio
+          facilis saepe&nbsp;eos.
+        </Paragraph>
+
+        <Heading5>Consectetur nobis consequat voluptates&nbsp;eiusmod</Heading5>
+
+        <Paragraph>
+          Iure vel nostrud repellendus. <Bold>Nostrud</Bold> autem consequatur,
+          provident officiis qui, mollit exercitation. Veniam minus cillum
+          suscipit aliqua, tenetur. Anim mollitia necessitatibus ad quos
+          consectetur voluptatem do&nbsp;<a href="#">corporis</a>.
+        </Paragraph>
+
+        <UnorderedList>
+          <ListItem>Perferendis tempor</ListItem>
+          <ListItem>Minim eiusmod </ListItem>
+          <ListItem>Tempor</ListItem>
+          <ListItem>Minus quia sint</ListItem>
+        </UnorderedList>
+
+        <Paragraph>
+          Corporis eligendi minim, enim proident reprehenderit iusto.{' '}
+          <Italic>Reprehenderit</Italic> commodo commodi, repudiandae voluptas
+          saepe sint libero. Praesentium eius distinctio ullamco vero iusto
+          praesentium eligendi animi. Consectetur dolore vero similique dolore,
+          ut labore&nbsp;omnis.
+        </Paragraph>
+
+        <Heading6>Maxime alias anim similique</Heading6>
+
+        <Paragraph>
+          Omnis corporis assumenda nisi ullam dolores culpa repellat. Molestias
+          praesentium necessitatibus minus, reiciendis officiis commodo
+          incidunt. Consectetur nostrud odio numquam&nbsp;tenetur.
+        </Paragraph>
+
+        <HorizontalRule />
+
         <Heading1>Heading level 1</Heading1>
+
         <Heading2>Heading level 2</Heading2>
+
         <Heading3>Heading level 3</Heading3>
+
         <Heading4>Heading level 4</Heading4>
+
         <Heading5>Heading level 5</Heading5>
+
         <Heading6>Heading level 6</Heading6>
 
         <Paragraph>
-          Paragraph with <b>bold</b>, <i>italic</i>, <a href="#">link</a> and{' '}
-          <Code>code</Code> styles.
+          Paragraph with <Bold>bold</Bold>, <Italic>italic</Italic>,{' '}
+          <a href="#">link</a> and <Code>code</Code> styles.
         </Paragraph>
 
-        {/* <Blockquote>
+        <Blockquote>
           <Paragraph>Blockquote</Paragraph>
-        </Blockquote> */}
+        </Blockquote>
 
         <Caption>Caption text</Caption>
+
+        <OrderedList>
+          <ListItem>Ordered list element one</ListItem>
+          <ListItem>Ordered list element two</ListItem>
+          <ListItem>Ordered list element three</ListItem>
+        </OrderedList>
+
+        <UnorderedList>
+          <ListItem>Unordered list element one</ListItem>
+          <ListItem>Unordered list element two</ListItem>
+          <ListItem>Unordered list element three</ListItem>
+        </UnorderedList>
       </SingleMeasure>
+    </Section>
+
+    <Section>
+      <ColumnDuo>
+        <Heading1>Super long title which goes over a couple of lines</Heading1>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+      </ColumnDuo>
+
+      <ColumnDuo>
+        <Heading3>A second column</Heading3>
+        <Paragraph>
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          elit&nbsp;tempora.
+        </Paragraph>
+      </ColumnDuo>
+    </Section>
+
+    <Section>
+      <ColumnTrio meh={10}>
+        <Heading6>Column one</Heading6>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+      </ColumnTrio>
+
+      <ColumnTrio>
+        <Heading6>Column two</Heading6>
+        <Paragraph>
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          elit&nbsp;tempora.
+        </Paragraph>
+      </ColumnTrio>
+
+      <ColumnTrio>
+        <Heading6>Column three</Heading6>
+        <Paragraph>
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          elit&nbsp;tempora.
+        </Paragraph>
+      </ColumnTrio>
+    </Section>
+    <Section>
+      <ColumnQuatro>
+        <Heading6>Column one</Heading6>
+        <Paragraph>
+          Consectetur adipisicing elit, alias at autem magna aliquid{' '}
+          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
+          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
+          facilis. molestiae consequat excepturi laborum perferendis tempor
+          minim eiusmod minim minus quia&nbsp;sint.
+        </Paragraph>
+      </ColumnQuatro>
+
+      <ColumnQuatro>
+        <Heading6>Column two</Heading6>
+        <Paragraph>
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          elit&nbsp;tempora.
+        </Paragraph>
+      </ColumnQuatro>
+
+      <ColumnQuatro>
+        <Heading6>Column three</Heading6>
+        <Paragraph>
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          elit&nbsp;tempora.
+        </Paragraph>
+      </ColumnQuatro>
+
+      <ColumnQuatro>
+        <Heading6>Column three</Heading6>
+        <Paragraph>
+          Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
+          quia nulla numquam aute cillum proident. Maiores iusto culpa molestias
+          quam id tenetur saepe impedit reiciendis itaque ducimus itaque
+          nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus
+          aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis
+          elit&nbsp;tempora.
+        </Paragraph>
+      </ColumnQuatro>
     </Section>
   </Page>
 );

@@ -64,9 +64,9 @@ padding-top: ${baselineShift}rem;
 
       */
     } else if (inScale) {
-      const scale = modularScale['scale-0'];
-      const size = scale[fontSize];
+      const scale = modularScale[`scale-${breakpoint}`];
 
+      const size = scale[fontSize];
       const rootSize = rootSizeValues[breakpoint];
       const baselineShift = calculateBaselineShift(
         size,
@@ -82,8 +82,13 @@ padding-top: ${baselineShift}rem;
         below
       );
 
+      /*
+      $baseline-shift: #{($get-size / 2 * (($lineheight * $rootsize / $get-size) - $cap-height)) / $rootsize + 0.00001};
+      $baseline-push: #{$below - (($get-size / 2 * (($lineheight * $rootsize / $get-size) - $cap-height)) / $rootsize + 0.00001)};
+      */
+
       return `${lineHeightStatement}
-font-size: ${size / rootSizeValues[breakpoint]}rem;
+font-size: ${size / rootSize}rem;
 margin-bottom: ${baselinePush}rem;
 padding-top: ${baselineShift}rem;
 `;
@@ -180,7 +185,7 @@ ${breakpointValues
           );
           return `@media screen and (min-width: ${breakpointValues[index + 1] /
             16}em ) {
-          font-size: ${size / rootSizeValues[index+1]}rem;
+          font-size: ${size / rootSizeValues[index + 1]}rem;
           margin-bottom: ${baselinePush}rem;
           padding-top: ${baselineShift}rem;
         }`;

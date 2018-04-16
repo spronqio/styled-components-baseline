@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Paragraph = styled.p`
   ${props => props.theme.sb.setFont({ type: 'body', weight: 'normal' })};
-  ${props => props.theme.sb.baselineWithFontSize('zeta', 'body', 2, 2, 'all')};
+  ${props => props.theme.sb.baseline('zeta', 'body', 2, 2, 'all')};
 `;
 
 export const Blockquote = styled.blockquote`
@@ -72,6 +72,21 @@ export const Heading6 = styled.h6`
     margin-top: -1rem;
   }
 `;
+
+export const Bold = styled.b`
+  font-weight: ${props => props.theme.sb.bodyType.bold};
+`;
+export const Strong = Bold.withComponent('strong').extend``;
+
+export const Emphasis = styled.em`
+  font-style: ${props => props.theme.sb.bodyType.italic};
+`;
+export const Italic = Emphasis.withComponent('i').extend``;
+export const Small = styled.small`
+  ${props => props.theme.sb.setFont({ type: 'heading', weight: 'regular' })};
+  font-style: normal;
+  line-height: 1rem;
+`;
 export const Button = styled.button`
   color: white;
   background-color: ${props => props.theme.sb.callToAction};
@@ -109,19 +124,95 @@ export const Code = styled.code`
   ${props => props.theme.sb.setFont({ type: 'monospace', weight: 'regular' })};
   line-height: 0.5rem;
 `;
-export const HR = styled.hr`
-  hr {
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 50%,
-      $captionColour 50%
-    );
-    background-position: 0 50%;
-    background-repeat: repeat-x;
-    background-size: 100% 0.15rem;
-    border: 0;
-    margin: 0;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+export const HorizontalRule = styled.hr`
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    ${props => props.theme.sb.captionColour} 50%
+  );
+  background-position: 0 50%;
+  background-repeat: repeat-x;
+  background-size: 100% 0.15rem;
+  border: 0;
+  margin: 0;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+`;
+export const ListItem = styled.li``;
+export const UnorderedList = styled.ul`
+  ${props => props.theme.sb.baseline('theta', 'body', 2, 2, 'all')};
+  ${ListItem} {
+    font-feature-settings: 'kern', 'onum', 'liga';
+    margin-left: 2rem;
+    ${props => props.theme.sb.breakpoint('break-1')(`margin-left: 0;`)};
+    ul {
+      padding-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 2rem;
+      border: 1px solid red;
+    }
+  }
+`;
+export const OrderedList = UnorderedList.withComponent('ol').extend`
+  list-style-type: none;
+
+  ${ListItem} {
+    counter-increment: top-level;
+
+    &:before {
+      content: counter(top-level) '.';
+      font-feature-settings: 'lnum', 'tnum';
+      margin-left: -3rem;
+      position: absolute;
+      text-align: right;
+      width: 2em;
+    }
+
+    ul {
+      li {
+        &:before {
+          content: '';
+        }
+
+        ol {
+          li {
+            counter-increment: alt-level;
+
+            &:before {
+              content: counter(alt-level) '.';
+            }
+          }
+        }
+      }
+    }
+
+    ol {
+      li {
+        counter-increment: sub-level;
+
+        &:before {
+          content: counter(top-level) '.' counter(sub-level);
+        }
+
+        ul {
+          li {
+            &:before {
+              content: '';
+            }
+          }
+        }
+
+        ol {
+          li {
+            counter-increment: sub-sub-level;
+
+            &:before {
+              content: counter(top-level) '.' counter(sub-level) '.'
+                counter(sub-sub-level);
+            }
+          }
+        }
+      }
+    }
   }
 `;

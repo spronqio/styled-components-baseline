@@ -6,8 +6,8 @@ export const Section = styled.div`
   position: relative;
   width: 94%;
   padding: 2rem 0;
-  ${props => props.theme.sb.breakpoint('break-3')(props.theme.sb.maxWidth(2))};
-  ${props => props.theme.sb.breakpoint('break-4')(props.theme.sb.maxWidth(3))};
+  ${props => props.theme.sb.breakpoint('break-3')(props.theme.sb.maxWidth(3))};
+  ${props => props.theme.sb.breakpoint('break-4')(props.theme.sb.maxWidth(4))};
   ${props => props.theme.sb.breakpoint('break-1')(`padding: 3rem 0;`)};
   ${props => props.theme.sb.breakpoint('break-2')(`padding: 4rem 0;`)};
 `;
@@ -69,15 +69,38 @@ export const ColumnTrio = Column.extend`
   ${props =>
     props.theme.sb.breakpoint('break-3')(`
         p {
-          ${props.theme.sb.baselineWithFontSize('zeta', 'heading', 2, 2, 3)};
+          ${props.theme.sb.baselineWithFontSize('eta', 'body', 2, 3, 3)};
         }
         `)};
   ${props =>
-    props.theme.sb.breakpoint('break-4')(
-      `
+    props.theme.sb.breakpoint('break-4')(`
         p {
-          ${props.theme.sb.baselineWithFontSize('eta', 'heading', 2, 2, 4)};
+          ${props.theme.sb.baselineWithFontSize('eta', 'body', 2, 3, 4)};
         }
-        `
+        `)};
+`;
+export const ColumnQuatro = Column.extend`
+  ${props =>
+    props.theme.sb.breakpoint('break-1')(
+      `width: 50%;
+      `
     )};
+  ${props =>
+    props.theme.sb.breakpoint('break-2')(
+      `width: 25%;
+      `
+    )};
+
+  ${props =>
+    props.theme.sb.breakpoint('break-3')(`
+      p {
+        ${props.theme.sb.baselineWithFontSize('eta', 'body', 2, 3, 3)};
+      }
+      `)};
+  ${props =>
+    props.theme.sb.breakpoint('break-4')(`
+      p {
+        ${props.theme.sb.baselineWithFontSize('eta', 'body', 2, 3, 4)};
+      }
+      `)};
 `;
