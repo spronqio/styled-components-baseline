@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  Anchor,
   Bold,
   Blockquote,
   Caption,
@@ -45,10 +46,10 @@ export default () => (
         </Caption>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
+          <Anchor href="#">quam proident</Anchor> quis aliquam. temporibus minus
+          eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do
+          officia facilis. molestiae consequat excepturi laborum perferendis
+          tempor minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
         <Paragraph>
           Quos atque officia quod. <Italic>Suscipit delectus</Italic> cupidatat,
@@ -91,10 +92,10 @@ export default () => (
 
         <Paragraph>
           Pariatur animi quis. Dolorem cupiditate{' '}
-          <a href="#">praesentium duis</a> iusto corrupti nobis nostrud,
-          exercitation consequatur. Nulla minim dignissimos reprehenderit
-          voluptatem. Recusandae delectus iure vel asperiores saepe dolorum
-          omnis eu aliquam&nbsp;similique.
+          <Anchor href="#">praesentium duis</Anchor> iusto corrupti nobis
+          nostrud, exercitation consequatur. Nulla minim dignissimos
+          reprehenderit voluptatem. Recusandae delectus iure vel asperiores
+          saepe dolorum omnis eu aliquam&nbsp;similique.
         </Paragraph>
 
         <Blockquote>
@@ -122,7 +123,7 @@ export default () => (
           Iure vel nostrud repellendus. <Bold>Nostrud</Bold> autem consequatur,
           provident officiis qui, mollit exercitation. Veniam minus cillum
           suscipit aliqua, tenetur. Anim mollitia necessitatibus ad quos
-          consectetur voluptatem do&nbsp;<a href="#">corporis</a>.
+          consectetur voluptatem do&nbsp;<Anchor href="#">corporis</Anchor>.
         </Paragraph>
 
         <UnorderedList>
@@ -164,7 +165,7 @@ export default () => (
 
         <Paragraph>
           Paragraph with <Bold>bold</Bold>, <Italic>italic</Italic>,{' '}
-          <a href="#">link</a> and <Code>code</Code> styles.
+          <Anchor href="#">link</Anchor> and <Code>code</Code> styles.
         </Paragraph>
 
         <Blockquote>
@@ -192,10 +193,10 @@ export default () => (
         <Heading1>Super long title which goes over a couple of lines</Heading1>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
+          <Anchor href="#">quam proident</Anchor> quis aliquam. temporibus minus
+          eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do
+          officia facilis. molestiae consequat excepturi laborum perferendis
+          tempor minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
       </ColumnDuo>
 
@@ -217,10 +218,10 @@ export default () => (
         <Heading6>Column one</Heading6>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
+          <Anchor href="#">quam proident</Anchor> quis aliquam. temporibus minus
+          eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do
+          officia facilis. molestiae consequat excepturi laborum perferendis
+          tempor minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
       </ColumnTrio>
 
@@ -253,10 +254,10 @@ export default () => (
         <Heading6>Column one</Heading6>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
+          <Anchor href="#">quam proident</Anchor> quis aliquam. temporibus minus
+          eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do
+          officia facilis. molestiae consequat excepturi laborum perferendis
+          tempor minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
       </ColumnQuatro>
 
@@ -301,17 +302,17 @@ export default () => (
         <Heading6>Main column</Heading6>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
+          <Anchor href="#">quam proident</Anchor> quis aliquam. temporibus minus
+          eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do
+          officia facilis. molestiae consequat excepturi laborum perferendis
+          tempor minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
+          <Anchor href="#">quam proident</Anchor> quis aliquam. temporibus minus
+          eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do
+          officia facilis. molestiae consequat excepturi laborum perferendis
+          tempor minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
       </ColumnMain>
       <ColumnSidebar>
@@ -342,17 +343,17 @@ export default () => (
         <Heading6>Main column</Heading6>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
+          <Anchor href="#">quam proident</Anchor> quis aliquam. temporibus minus
+          eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do
+          officia facilis. molestiae consequat excepturi laborum perferendis
+          tempor minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
         <Paragraph>
           Consectetur adipisicing elit, alias at autem magna aliquid{' '}
-          <a href="#">quam proident</a> quis aliquam. temporibus minus eius
-          veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia
-          facilis. molestiae consequat excepturi laborum perferendis tempor
-          minim eiusmod minim minus quia&nbsp;sint.
+          <Anchor href="#">quam proident</Anchor> quis aliquam. temporibus minus
+          eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do
+          officia facilis. molestiae consequat excepturi laborum perferendis
+          tempor minim eiusmod minim minus quia&nbsp;sint.
         </Paragraph>
       </ColumnMain>
     </Section>

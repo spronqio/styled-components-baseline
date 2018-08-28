@@ -3,6 +3,36 @@ import styled from 'styled-components';
 export const Paragraph = styled.p`
   ${props => props.theme.sb.setFont({ type: 'body', weight: 'normal' })};
   ${props => props.theme.sb.baseline('zeta', 'body', 2, 2, 'all')};
+  a {
+    ${({
+      theme: { sb: { backgroundColour, hoverColour, linkColour } = {} } = {}
+    }) => `
+
+    background-image: linear-gradient(to bottom,transparent 50%, ${linkColour} 50%);
+
+    background-position: 0 93%;
+    background-repeat: repeat-x;
+    background-size: 100% 0.15rem;
+    
+    text-shadow: 0.1rem 0 ${backgroundColour},
+                 0.15rem 0 ${backgroundColour},
+                -0.1rem 0 ${backgroundColour},
+                -0.15rem 0 ${backgroundColour};
+                
+               
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        lighten(${hoverColour}, 20%) 50%
+      );
+    }
+
+    `};
+  }
 `;
 
 export const Blockquote = styled.blockquote`
@@ -86,6 +116,19 @@ export const Small = styled.small`
   ${props => props.theme.sb.setFont({ type: 'heading', weight: 'regular' })};
   font-style: normal;
   line-height: 1rem;
+`;
+
+export const Anchor = styled.a`
+  color: ${props => props.theme.sb.linkColour};
+  text-decoration: none;
+  transition: color 0.1s, background-color 0.1s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: ${props => props.theme.sb.hoverColour};
+    text-decoration: none;
+  }
 `;
 export const Button = styled.button`
   color: white;
