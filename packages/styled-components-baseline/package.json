@@ -7,7 +7,7 @@
   "browser": "index.umd.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/panaceajs/styled-components-baseline.git"
+    "url": "https://github.com/spronqio/styled-components-baseline.git"
   },
   "peerDependencies": {
     "react": "^16.2.0",
